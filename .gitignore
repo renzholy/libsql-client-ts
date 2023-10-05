@@ -1,6 +1,5 @@
 node_modules
 /lib-esm
-/lib-cjs
 /docs
 *.tsbuildinfo
 Session.vim
