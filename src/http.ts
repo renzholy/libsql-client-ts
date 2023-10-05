@@ -5,7 +5,7 @@ import {
   Stream,
   openHttp,
   HttpClient as HranaHttpClient,
-} from "@libsql/hrana-client/lib-esm";
+} from "@libsql/hrana-client";
 import type { Config, Client } from "./api.js";
 import type { InStatement, ResultSet, Transaction, IntMode } from "./api.js";
 import { TransactionMode, LibsqlError } from "./api.js";
