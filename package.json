@@ -1,5 +1,5 @@
 {
-    "name": "@libsql/client",
+    "name": "libsql-serverless",
     "version": "0.3.6-pre.1",
     "keywords": [
         "libsql",
@@ -25,38 +25,6 @@
     "main": "lib-cjs/node.js",
     "types": "lib-esm/node.d.ts",
     "exports": {
-        ".": {
-            "types": "./lib-esm/node.d.ts",
-            "import": {
-                "workerd": "./lib-esm/web.js",
-                "deno": "./lib-esm/web.js",
-                "edge-light": "./lib-esm/web.js",
-                "netlify": "./lib-esm/web.js",
-                "node": "./lib-esm/node.js",
-                "default": "./lib-esm/node.js"
-            },
-            "require": "./lib-cjs/node.js"
-        },
-        "./node": {
-            "types": "./lib-esm/node.d.ts",
-            "import": "./lib-esm/node.js",
-            "require": "./lib-cjs/node.js"
-        },
-        "./http": {
-            "types": "./lib-esm/http.d.ts",
-            "import": "./lib-esm/http.js",
-            "require": "./lib-cjs/http.js"
-        },
-        "./ws": {
-            "types": "./lib-esm/ws.d.ts",
-            "import": "./lib-esm/ws.js",
-            "require": "./lib-cjs/ws.js"
-        },
-        "./sqlite3": {
-            "types": "./lib-esm/sqlite3.d.ts",
-            "import": "./lib-esm/sqlite3.js",
-            "require": "./lib-cjs/sqlite3.js"
-        },
         "./web": {
             "types": "./lib-esm/web.d.ts",
             "import": "./lib-esm/web.js",
@@ -65,18 +33,6 @@
     },
     "typesVersions": {
         "*": {
-            ".": [
-                "./lib-esm/node.d.ts"
-            ],
-            "http": [
-                "./lib-esm/http.d.ts"
-            ],
-            "hrana": [
-                "./lib-esm/hrana.d.ts"
-            ],
-            "sqlite3": [
-                "./lib-esm/sqlite3.d.ts"
-            ],
             "web": [
                 "./lib-esm/web.d.ts"
             ]
@@ -99,8 +55,7 @@
     },
     "dependencies": {
         "@libsql/hrana-client": "^0.5.5",
-        "js-base64": "^3.7.5",
-        "libsql": "^0.1.24"
+        "js-base64": "^3.7.5"
     },
     "devDependencies": {
         "@types/jest": "^29.2.5",
