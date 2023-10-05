@@ -1,6 +1,6 @@
 {
     "name": "libsql-serverless",
-    "version": "0.3.6-pre.1",
+    "version": "0.3.6-pre.2",
     "keywords": [
         "libsql",
         "database",
@@ -22,10 +22,10 @@
     ],
     "license": "MIT",
     "type": "module",
-    "main": "lib-cjs/node.js",
-    "types": "lib-esm/node.d.ts",
+    "main": "lib-cjs/web.js",
+    "types": "lib-esm/web.d.ts",
     "exports": {
-        "./web": {
+        ".": {
             "types": "./lib-esm/web.d.ts",
             "import": "./lib-esm/web.js",
             "require": "./lib-cjs/web.js"
@@ -33,7 +33,7 @@
     },
     "typesVersions": {
         "*": {
-            "web": [
+            ".": [
                 "./lib-esm/web.d.ts"
             ]
         }
