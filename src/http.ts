@@ -1,11 +1,10 @@
-import {
+import type {
   HttpStream,
   ProtocolVersion,
   RowsResult,
   Stream,
-  openHttp,
-  HttpClient as HranaHttpClient,
 } from "@libsql/hrana-client";
+import { HttpClient as HranaHttpClient } from "@libsql/hrana-client/lib-esm/http/client.js";
 import type { Config, Client } from "./api.js";
 import type { InStatement, ResultSet, Transaction, IntMode } from "./api.js";
 import { TransactionMode, LibsqlError } from "./api.js";
@@ -69,7 +68,7 @@ export class HttpClient implements Client {
     intMode: IntMode,
     customFetch: Function | undefined
   ) {
-    this.#client = openHttp(url, authToken, customFetch);
+    this.#client = new HranaHttpClient(url, authToken, customFetch);
     this.#client.intMode = intMode;
     this.protocol = "http";
   }

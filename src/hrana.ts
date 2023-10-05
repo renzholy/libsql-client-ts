@@ -1,20 +1,22 @@
-import {
+import type {
   Batch,
-  BatchCond,
   BatchStep,
+  ProtocolVersion,
+  RowsResult,
+  Stream,
+} from "@libsql/hrana-client";
+import { BatchCond } from "@libsql/hrana-client/lib-esm/batch.js";
+import { Stmt } from "@libsql/hrana-client/lib-esm/stmt.js";
+import {
+  ProtoError,
+  ProtocolVersionError,
+  ResponseError,
   ClientError,
   ClosedError,
   HttpServerError,
   InternalError,
-  ProtoError,
-  ProtocolVersion,
-  ProtocolVersionError,
-  ResponseError,
-  RowsResult,
-  Stmt,
-  Stream,
   WebSocketError,
-} from "@libsql/hrana-client";
+} from "@libsql/hrana-client/lib-esm/errors.js";
 import type {
   InStatement,
   ResultSet,
